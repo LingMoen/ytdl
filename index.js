@@ -101,7 +101,7 @@ async function getDownload(vid, preferredQualityId) {
 
 
 
-app.post('/download/ytmp4', async (req, res) => {
+app.get('/download/ytmp4', async (req, res) => {
 	const {
 		videoUrl
 	} = req.body;

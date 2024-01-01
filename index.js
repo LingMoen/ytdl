@@ -104,7 +104,7 @@ async function getDownload(vid, preferredQualityId) {
 app.get('/download/ytmp4', async (req, res) => {
 	const {
 		videoUrl
-	} = req.body;
+	} = req.query;
 
 	if (!videoUrl) {
 		return res.status(400).json({
@@ -129,7 +129,7 @@ app.get('/download/getlink', async (req, res) => {
 	const {
 		videoId,
 		qualityId
-	} = req.body;
+	} = req.query;
 
 	if (!videoUrl) {
 		return res.status(400).json({
